@@ -1,0 +1,32 @@
+{
+  "name": "tella-tv-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Tella TV — list videos, manage playlists, webhooks, and cinematic zoom annotations for product recordings.",
+  "main": "dist/index.js",
+  "bin": {
+    "tella-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "tella", "tella-tv", "video", "screen-recording", "model-context-protocol"],
+  "author": "AprailRain-py",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
